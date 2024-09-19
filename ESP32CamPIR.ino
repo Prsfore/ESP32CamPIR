@@ -42,9 +42,9 @@ const char* password = "s4sviuz4";
 // Email settings
 #define SMTP_SERVER "smtp.gmail.com"
 #define SMTP_PORT 587 // SSL port
-#define SMTP_USER "cemerensahin58@gmail.com"
-#define SMTP_PASSWORD "gzxertwaoxqvhnbi"
-#define RECIPIENT "rahmicanyildiz@gmail.com"
+#define SMTP_USER "Your Gmail"
+#define SMTP_PASSWORD "gzxertwaoxqvhnbi" // Your mail app password
+#define RECIPIENT "Recipient Gmail"
 #define SUBJECT "Motion Detected"
 #define BODY "Motion has been detected. Photo attached."
 
@@ -117,7 +117,6 @@ void setup() {
   // initialize EEPROM with predefined size ( erase before upload clear sketch)
   EEPROM.begin(EEPROM_SIZE);
   pictureNumber = EEPROM.read(0) + 1;
-  // Path where new picture will be saved in SD Card
   path = "/picture" + String(pictureNumber) +".jpg";
   
   // Turns off the ESP32-CAM white on-board LED (flash) connected to GPIO 4
